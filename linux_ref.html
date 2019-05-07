@@ -8,10 +8,71 @@
       <th>Command</th>
       <th>Syntax</th>
       <th>Use</th>
+      <th>Example</th>
   </tr>
   <tr>
       <td>ls</td>
       <td>ls [OPTION]... [FILE]...</td>
       <td>List directory contents</td>
+      <td>30  ls tmp</td>
   </tr>
+  <tr>
+     <td>history</td>
+     <td>history (no options)</td>
+     <td>Display command history</td>
+     <td>42  cp /etc/services 43  cat services 44  more services 45  less services 46  history</td>
+   </tr>
+   <tr>
+      <td>cd</td>
+      <td>cd [directory]</td>
+      <td>Changes to directory chosen</td>
+      <td>23  cd tmp</td>
+   </tr>
+   <tr>
+      <td>echo</td>
+      <td>echo [SHORT-OPTION]... [STRING]...</td>
+      <td>Echo the STRING(s) to standard output.</td>
+      <td>echo “hello world”</td>
+   </tr>
+   <tr>
+      <td>pwd</td>
+      <td>pwd [OPTION]...</td>
+      <td>Print the full filename of the current working directory.</td>
+      <td>11  pwd</td>
+   </tr>
+   <tr>
+      <td>mkdir</td>
+      <td>mkdir [OPTION]... DIRECTORY...</td>
+      <td>Create the DIRECTORY(ies), if they do not already exist.</td>
+      <td>15  mkdir mydir</td>
+   </tr>
+   <tr>
+      <td>mv</td>
+      <td>mv [OPTION]... [-T] SOURCE DEST</td>
+      <td>Rename SOURCE to DEST, or move SOURCE(s) to DIRECTORY.</td>
+      <td>mv tmp/readme2 readme</td>
+   </tr>
+   <tr>
+      <td>date</td>
+      <td>date [OPTION]... [+FORMAT]</td>
+      <td>Display the current time in the given FORMAT, or set the system date.</td>
+      <td>date</td>
+   </tr>
+   <tr>
+      <td>cat</td>
+      <td>cat [OPTION]... [FILE]...</td>
+      <td>Concatenate FILE(s) to standard output.</td>
+      <td>cat myfirstbashscript
+              #!/bin/bash
+              echo "Hello world"
+      </td>
+   </tr>
+   <tr>
+      <td>uname</td>
+      <td>uname [OPTION]...</td>
+      <td>Print certain system information.</td>
+      <td>uname -a
+              Linux rpi04 4.14.79-v7+ #1159 SMP Sun Nov 4
+      </td>
+   </tr>
 </table>
