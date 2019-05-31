@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Area of Circle</title>
+    <title>Form Input - Area of Circle</title>
   </head>
 
 
@@ -12,12 +12,12 @@
 
     <?php
        // define variables and set to empty values
-       $lower = $upper = $output = $retc = "";
+       $arg1 = $arg2 = $output = $retc = "";
 
        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-         $lower = test_input($_POST["Lower bound"]);
-         $upper = test_input($_POST["Upper bound"]);
-         exec("/usr/lib/cgi-bin/sp1a/areaofcircle2 " . $lower . " " . $upper, $output, $retc); 
+         $arg1 = test_input($_POST["arg1"]);
+         $arg2 = test_input($_POST["arg2"]);
+         exec("/usr/lib/cgi-bin/sp1a/areaofcircle2 " . $arg1 . " " . $arg2, $output, $retc); 
        }
 
        function test_input($data) {
@@ -29,8 +29,8 @@
     ?>
 
     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-      Lower: <input type="text" name="lower"><br>
-      Upper: <input type="text" name="upper"><br>
+      Arg1: <input type="text" name="arg1"><br>
+      Arg2: <input type="text" name="arg2"><br>
       <br>
       <input type="submit" value="Go!">
     </form>
@@ -39,11 +39,11 @@
        // only display if return code is numeric - i.e. exec has been called
        if (is_numeric($retc)) {
          echo "<h2>Your Input:</h2>";
-         echo $lower;
+         echo $arg1;
          echo "<br>";
-         echo $upper;
+         echo $arg2;
          echo "<br>";
-       //Output here!
+       
          echo "<h2>Program Output (an array):</h2>";
          foreach ($output as $line) {
            echo $line;
