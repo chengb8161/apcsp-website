@@ -43,7 +43,7 @@
          echo "<br>";
          echo $upper;
          echo "<br>";
-       
+       //Output here!
          echo "<h2>Program Output (an array):</h2>";
          foreach ($output as $line) {
            echo $line;
